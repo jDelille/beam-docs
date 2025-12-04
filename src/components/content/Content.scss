@@ -1,0 +1,56 @@
+@use "../../styles/variables" as var;
+@use "../../styles/breakpoints" as bp;
+
+.content {
+  background-color: var.$primaryBGColor;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var.$primaryTextColor;
+  padding-inline: 3rem;
+  padding-top: 2.5rem;
+  @include bp.respond(md) {
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 35px;
+  }
+  p {
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+  .docs-heading {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: var.$borderColor;
+    padding-top: calc(0.25rem * 10);
+    margin-top: calc(0.25rem * 10);
+    font-weight: 600;
+  }
+  .paragraph {
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 1rem;
+    
+    li {
+      padding-left: 15px;
+      list-style-type: disc;
+      list-style-position: inside;
+      strong {
+        color: rgb(108, 108, 228);
+        font-weight: 500;
+      }
+    }
+  }
+
+  .sub-heading {
+    margin-top: 2rem;
+    h3 {
+      font-weight: 500;
+    }
+  }
+}

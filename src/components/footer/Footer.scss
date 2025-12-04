@@ -1,0 +1,81 @@
+@use "../../styles/variables" as var;
+
+.footer {
+  height: 400px;
+  background-color: fff;
+  width: 100%;
+  border-top: 1px solid var.$borderColor;
+  padding: 2rem 0;
+  .footer-content {
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+
+    .name {
+      height: calc(400px - 4rem);
+      width: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h1 {
+        font-size: 26px;
+        font-weight: 500;
+      }
+      P {
+        color: gray;
+        font-size: 12px;
+      }
+    }
+    .sections {
+      width: 70%;
+      display: flex;
+      .section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        flex: 1;
+        .section-title {
+          font-size: 14px;
+          font-weight: 500;
+          padding-top: 10px;
+        }
+        li {
+          font-size: 14px;
+          color: #6d6c6c;
+          list-style: none;
+        }
+      }
+    }
+    .newsletter {
+      width: 15%;
+      .section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        p {
+          font-size: 14px;
+          color: gray;
+        }
+        .section-title {
+          font-size: 14px;
+          font-weight: 500;
+          padding-top: 10px;
+          color: black;
+        }
+        .input {
+            display: flex;
+            border: 1px solid rgb(179, 179, 179);
+            padding: 5px 10px;
+            border-radius: 4px;
+            input {
+                width: 70%;
+                border: none;
+                outline: none;
+             
+            }
+            button {}
+        }
+      }
+    }
+  }
+}

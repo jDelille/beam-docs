@@ -1,0 +1,84 @@
+@use "../../styles/variables" as var;
+@use "../../styles/breakpoints" as bp;
+
+.sidebar,
+.right-sidebar {
+  min-width: 284px;
+  height: calc(100vh - 64px);
+  background-color: var.$primaryBGColor;
+  padding-top: 3rem;
+  padding-right: 2rem;
+  position: sticky;
+  top: 64px;
+
+  @include bp.respond(md) {
+    padding: 2rem;
+  }
+
+  @include bp.respond(lg) {
+    padding: 2rem 0;
+  }
+  .version {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 40px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    .icon-wrapper {
+      background-color: hsl(212, 100%, 97%);
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgb(145, 182, 224);
+      border-radius: 4px;
+      svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      p {
+        font-weight: 600;
+        font-size: 13px;
+      }
+      span {
+        font-size: 12px;
+        color: gray;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: scroll;
+    max-height: calc(100vh - 104px - 5rem);
+    scrollbar-width: thin;
+    scrollbar-color: #eaeaea transparent;
+    scrollbar-gutter: stable;
+    padding-bottom: 3rem;
+    .section-title {
+      font-size: 14px;
+      font-weight: 500;
+      padding-top: 10px;
+    }
+    li {
+      font-size: 14px;
+      color: #6d6c6c;
+      list-style: none;
+      padding-left: 5px;
+    }
+    .active {
+      color: green;
+    }
+  }
+}
