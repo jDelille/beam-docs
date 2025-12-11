@@ -1,22 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
-import GettingStartedPage from "./pages/getting-started/GettingStarted";
+import GettingStartedPage from "./pages/GettingStarted";
 import CommandPage from "./pages/CommandPage";
 import AboutPage from "./pages/About";
-import TemplateStructurePage from "./pages/getting-started/TemplateStructure";
 import TemplatesPage from "./pages/TemplatesPage";
 import TemplatePage from "./pages/TemplatePage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/docs/getting-started" element={<GettingStartedPage />} />
 
-        <Route
-          path="/docs/getting-started/template-structure"
-          element={<TemplateStructurePage />}
-        />
+        <Route index element={<HomePage />} />
+        <Route path="/docs/getting-started/:section" element={<GettingStartedPage />} />
 
         <Route
           path="/docs/commands/:category/:command"

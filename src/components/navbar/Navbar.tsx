@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         </div>
         <ul className="links">
           <li>
-            <Link to="/docs/getting-started">Docs</Link>
+            <Link to="/docs/getting-started/whatIsBeam">Docs</Link>
           </li>
           <li>
             <Link to="/templates">Templates</Link>
@@ -21,14 +21,14 @@ const Navbar: React.FC<NavbarProps> = () => {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/github.com" target="blank">
+            <Link to="https://github.com/jDelille/CAST" target="blank">
               Github
             </Link>
           </li>
         </ul>
-        <div className="controls">
+        {/* <div className="controls">
           <input type="text" placeholder="Search documentation..." />
-        </div>
+        </div> */}
       </div>
     </nav>
   );

@@ -9,6 +9,10 @@
     font-family: "Geist", sans-serif;
 }
 
+main {
+    flex: 1;
+}
+
 .page {
     background-color: var.$primaryBGColor;
     .page-content {
@@ -18,7 +22,8 @@
         display: flex;
         padding-bottom: 3rem;
         @include bp.respond(md) {
-            max-width: 100%;
+            padding: 0 2rem;
+            
         }
 
         .templates {

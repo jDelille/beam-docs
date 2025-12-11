@@ -1,6 +1,6 @@
 import React from "react";
 import { BiPurchaseTagAlt } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Sidebar.scss";
 
 type SidebarProps = {};
@@ -19,57 +19,97 @@ const LeftSidebar: React.FC<SidebarProps> = () => {
       <ul className="links">
         <p className="section-title">Getting Started</p>
         <li>
-          <Link to={"/docs/getting-started"}>What is BEAM?</Link>
+          <NavLink to="/docs/getting-started/whatIsBeam" className={({ isActive }) => isActive ? "active" : ""}>
+            What is BEAM?
+          </NavLink>
         </li>
         <li>
-          <Link to={"/docs/getting-started/template-structure"}>Template Structure</Link>
+          <NavLink to="/docs/getting-started/templateStructure" className={({ isActive }) => isActive ? "active" : ""}>
+            Template Structure
+          </NavLink>
         </li>
-        <li>Install templates</li>
-        <li>Commands</li>
+        <li>
+          <NavLink to="/docs/getting-started/installTemplates" className={({ isActive }) => isActive ? "active" : ""}>
+            Install Templates
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/getting-started/commands" className={({ isActive }) => isActive ? "active" : ""}>
+            Commands
+          </NavLink>
+        </li>
 
         <p className="section-title">Project Commands</p>
         <li>
-          <Link to={"/docs/commands/project/create"} className="active">Create project</Link>
+          <NavLink to="/docs/commands/project/create" className={({ isActive }) => isActive ? "active" : ""}>
+            Create project
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/commands/project/rename" className={({ isActive }) => isActive ? "active" : ""}>
+            Rename project
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/commands/project/copy" className={({ isActive }) => isActive ? "active" : ""}>
+            Copy project
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/commands/project/delete" className={({ isActive }) => isActive ? "active" : ""}>
+            Delete project
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/commands/project/view" className={({ isActive }) => isActive ? "active" : ""}>
+            View projects
+          </NavLink>
         </li>
 
-        <li>
-          <Link to={"/docs/commands/project/rename"} className="active">Rename project</Link>
-        </li>
-        <li>
-          <Link to={"/docs/commands/project/copy"} className="active">Copy project</Link>
-        </li>
-        <li>
-          <Link to={"/docs/commands/project/delete"} className="active">Delete project</Link>
-        </li>
-        <li>
-          <Link to={"/docs/commands/project/view"} className="active">View projects</Link>
-        </li>
         <p className="section-title">Template Commands</p>
         <li>
-          <Link to={"/docs/commands/template/create"} className="active">Create template</Link>
+          <NavLink to="/docs/commands/template/create" className={({ isActive }) => isActive ? "active" : ""}>
+            Create template
+          </NavLink>
         </li>
-        <li className="active">Install template</li>
-        <li className="active">Copy template</li>
-        <li className="active">Delete template</li>
-        <li>Download template</li>
-        <li>Upload template</li>
-        <li>Edit template</li>
-        <li className="active">View templates</li>
+        <li>
+          <NavLink to="/docs/commands/template/install" className={({ isActive }) => isActive ? "active" : ""}>
+            Install template
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/commands/template/copy" className={({ isActive }) => isActive ? "active" : ""}>
+            Copy template
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/commands/template/delete" className={({ isActive }) => isActive ? "active" : ""}>
+            Delete template
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/commands/template/download" className={({ isActive }) => isActive ? "active" : ""}>
+            Download template
+          </NavLink>
+        </li>
+        <li className="greyed-out">Upload template</li>
+
         <p className="section-title">Trash Commands</p>
-
-        <li className="active">View trash</li>
-        <li className="active">Empty trash</li>
-        <li className="active">Restore file</li>
-
-        <p className="section-title">Guides</p>
-        <li>Template Structure</li>
-        <li>Creating a project</li>
-        <li>Uploading templates</li>
-        <li>Downloading templates</li>
-
-        <p className="section-title">About the BEAM CLI</p>
-        <li>About the examples</li>
-        <li>Github</li>
+        <li>
+          <NavLink to="/docs/commands/trash/view" className={({ isActive }) => isActive ? "active" : ""}>
+            View trash
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/commands/trash/empty" className={({ isActive }) => isActive ? "active" : ""}>
+            Empty trash
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/docs/commands/trash/recover" className={({ isActive }) => isActive ? "active" : ""}>
+            Recover file
+          </NavLink>
+        </li>
       </ul>
     </div>
   );

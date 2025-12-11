@@ -1,85 +1,134 @@
-export const GETTING_STARTED_DOC = {
-  title: "BEAM Docs",
-  intro: "Welcome to the official BEAM documentation!",
-  sections: [
-    {
-      heading: "What is BEAM?",
-      body: `BEAM is a command-line tool for generating new projects from reusable,
-customizable templates. It allows you to define a project structure one
-time, then create new projects instantly without copying folders,
-renaming files, or handling boilerplate by hand.
-
-Whether you're a solo developer or part of a larger team, BEAM helps
-maintain consistency, speed up development, and eliminate the repetitive
-setup work that slows you down.`,
-    },
-    {
-      heading: "How to use the docs",
-      body: `The BEAM documentation is organized into three main sections:`,
-      list: [
-        "Getting Started: Learn installation, setup, and how to create your first template and project.",
-        "Commands: A complete list of every BEAM command, including arguments, examples, and usage notes.",
-        "Guides: Step-by-step tutorials for real workflows like installing templates, replacing placeholders, trash management, and more.",
-      ],
-    },
-    {
-      heading: "Creating a Template",
-      body: `Templates are reusable blueprints for generating new projects. A
-template can contain folders, files, placeholders, configuration, and
-anything else required to scaffold a project.
-
-Below is the basic workflow for creating your first template:`,
-      subSection: {
-        title: "Getting Started",
-        description: `Learn how to build a simple template, define placeholders, and make it
-ready to use with the create project command.`,
+export const GETTING_STARTED_DOCS = {
+  whatIsBeam: {
+    title: "What is BEAM?",
+    intro:
+      "BEAM is a powerful command-line tool for generating new projects from reusable, customizable templates. It helps developers maintain consistency, save time, and eliminate repetitive setup work.",
+    sections: [
+      {
+        heading: "Overview",
+        body: "With BEAM, you define a project structure once as a template, then generate new projects instantly without manually copying files, renaming files, or handling boilerplate. This ensures your projects are consistent and ready to code immediately.",
       },
-    },
-    {
-      heading: "Installing a Template",
-      body: `Once a template exists, you can import it from local storage, download
-it, or install it from an external source.
+      {
+        heading: "Who is it for?",
+        body: "BEAM is ideal for solo developers, small teams, or large organizations who want to standardize project setup. By using templates, everyone on your team starts from the same structure and conventions.",
+      },
+      {
+        heading: "Key Features",
+        body: "BEAM combines project and template management with helpful utilities for file handling. Some of its standout features include:",
+        list: [
+          "Create projects from installed or downloaded templates",
+          "Manage templates easily (create, copy, rename, delete, install, download)",
+          "Automatic placeholder replacement during project generation",
+          "Trash system to safely delete and recover projects, templates, and files",
+          "Nested directory support in templates",
+          "Remote template downloads via Supabase",
+        ],
+      },
+    ],
+  },
 
-BEAM allows you to install templates using:`,
-      list: ["Local folders", "Downloaded ZIP files", "Remote URLs", "Package exports (coming soon)"],
-      subSection: {
-        title: "Installing Your First Template",
-        description: "Follow the guide to add templates to BEAM and verify they are ready to use.",
+  templateStructure: {
+    title: "Template Structure",
+    intro: "Learn how to organize and build templates for BEAM.",
+    sections: [
+      {
+        heading: "What is a Template?",
+        body: "Templates are reusable blueprints containing folders, files, placeholder variables, and a configuration file that BEAM reads. They serve as the foundation for generating new projects quickly and consistently.",
       },
-    },
-    {
-      heading: "Using a Template",
-      body: `After installing a template, you can generate new projects instantly.
-BEAM will copy the template, replace placeholders, and build your project
-directory automatically.
+      {
+        heading: "Creating Templates",
+        body: "Steps to create your first template and define its structure:",
+        list: [
+          "Create folders and files for your template according to your project structure.",
+          "Add placeholders for dynamic content (e.g., project name, author, version).",
+          "Include a configuration file if needed for custom template behavior.",
+          "Save your template locally or share it with your team.",
+        ],
+      },
+      {
+        heading: "Best Practices",
+        body: "When creating templates, keep them maintainable and flexible:",
+        list: [
+          "Use clear folder and file naming conventions.",
+          "Keep placeholder names consistent across files.",
+          "Organize templates in a dedicated folder (e.g., `.templates`).",
+          "Test templates by generating a sample project before sharing.",
+        ],
+      },
+    ],
+  },
 
-Learn how to:`,
-      list: [
-        "Create a project from a template",
-        "Customize placeholder values",
-        "Handle nested directories and file replacements",
-        "Manage template versions",
-      ],
-      subSection: {
-        title: "Create Your First Project",
-        description: `A walkthrough of the create project command and how BEAM
-turns templates into ready-to-code applications.`,
+  installTemplates: {
+    title: "Installing Templates",
+    intro: "Templates must be installed in BEAM to create projects from them. BEAM provides multiple ways to install templates.",
+    sections: [
+      {
+        heading: "Local Installation",
+        body: "Copy an existing template folder into your BEAM templates directory. BEAM will automatically detect it and make it available for project creation.",
       },
-    },
-    {
-      heading: "Next Steps",
-      body: `Once you're comfortable with the basics, dive into the advanced features
-BEAM offers:`,
-      list: [
-        "Trash system for safe deletion and restoration",
-        "Template management commands",
-        "File replacement and placeholder scanning",
-        "Building custom automation workflows",
-      ],
-      subSection: {
-        title: "Continue Learning",
-        description: "Explore the guides and full API reference to unlock the complete power of BEAM.",
+      {
+        heading: "Download Templates",
+        body: "Use the `download template` command to fetch templates from an external source.",
       },
-    },
-  ],
+      {
+        heading: "Install from path",
+        body: "Provide a path pointing to a file. BEAM will download, extract, and register it automatically.",
+      },
+      {
+        heading: "Verifying Installed Templates",
+        body: "After installation, use `view templates` to list all available templates and ensure your new template is ready to use.",
+      },
+    ],
+  },
+
+  commands: {
+    title: "Commands",
+    intro: "BEAM provides a set of commands for managing projects, templates, files, and utilities. Below is an overview of key commands.",
+    sections: [
+      {
+        heading: "Project Commands",
+        body: "Commands for managing your projects:",
+        list: [
+          "create project - generate a new project from an installed template",
+          "copy project - duplicate an existing project with all files intact",
+          "rename project - rename a project folder and update configuration references",
+          "delete project - safely remove a project to the trash",
+          "view projects - list all available projects and their templates",
+        ],
+      },
+      {
+        heading: "Template Commands",
+        body: "Commands for managing templates:",
+        list: [
+          "create template - define a new reusable template",
+          "install template - add a template to BEAM from a local folder",
+          "download template - fetch a template from a remote source",
+          "copy template - duplicate a template within the templates directory",
+          "rename template - rename an installed template",
+          "delete template - move a template to the trash",
+          "view templates - list all installed templates",
+        ],
+      },
+      {
+        heading: "File & Trash Commands",
+        body: "Commands for handling files and deleted items:",
+        list: [
+          "delete <file> - move a file to the trash",
+          "recover <file> - restore a file from the trash",
+          "empty trash - permanently remove deleted projects, templates, and files",
+          "view trash - see contents of the trash",
+        ],
+      },
+      {
+        heading: "Utility Commands",
+        body: "Other useful commands:",
+        list: [
+          "goto <directory> - change the current working directory",
+          "view <directory> - view contents of a folder",
+          "clear - clear the terminal screen",
+          "help - display help and command usage information",
+        ],
+      },
+    ],
+  },
 } as const;
