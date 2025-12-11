@@ -2,7 +2,7 @@ export const GETTING_STARTED_DOCS = {
   whatIsBeam: {
     title: "What is BEAM?",
     intro:
-      "BEAM is a powerful command-line tool for generating new projects from reusable, customizable templates. It helps developers maintain consistency, save time, and eliminate repetitive setup work.",
+      "BEAM is a powerful command-line tool for generating new projects from reusable, customizable templates. It helps developers maintain consistency, save time, and eliminate repetitive setup work. Currently, only creating projects using templates is implemented. We are working on doing the same for files and components. Stay tuned for the upcomming BEAM updates and reach out if you want to collaborate.",
     sections: [
       {
         heading: "Overview",
@@ -10,7 +10,7 @@ export const GETTING_STARTED_DOCS = {
       },
       {
         heading: "Who is it for?",
-        body: "BEAM is ideal for solo developers, small teams, or large organizations who want to standardize project setup. By using templates, everyone on your team starts from the same structure and conventions.",
+        body: "BEAM is ideal for solo developers, small teams, or large organizations who want to standardize project setup. By using templates, everyone on your team starts from the same structure and conventions. Many projects follow a similar structure and the goal of BEAM is to take advantage of that and make setting up new projects as quick and easy.",
       },
       {
         heading: "Key Features",
@@ -51,7 +51,6 @@ export const GETTING_STARTED_DOCS = {
         list: [
           "Use clear folder and file naming conventions.",
           "Keep placeholder names consistent across files.",
-          "Organize templates in a dedicated folder (e.g., `.templates`).",
           "Test templates by generating a sample project before sharing.",
         ],
       },

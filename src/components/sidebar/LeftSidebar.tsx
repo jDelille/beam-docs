@@ -7,7 +7,7 @@ type SidebarProps = {};
 const LeftSidebar: React.FC<SidebarProps> = () => {
   return (
     <div className="sidebar">
-      <div className="version">
+      {/* <div className="version">
         <div className="icon-wrapper">
           <BiPurchaseTagAlt size={22} color="#0072f5ff" />
         </div>
@@ -15,7 +15,7 @@ const LeftSidebar: React.FC<SidebarProps> = () => {
           <p>Latest Version</p>
           <span>1.0.1</span>
         </div>
-      </div>
+      </div> */}
       <ul className="links">
         <p className="section-title">Getting Started</p>
         <li>
@@ -80,6 +80,11 @@ const LeftSidebar: React.FC<SidebarProps> = () => {
         <li>
           <NavLink to="/docs/commands/template/copy" className={({ isActive }) => isActive ? "active" : ""}>
             Copy template
+          </NavLink>
+        </li>
+         <li>
+          <NavLink to="/docs/commands/template/rename" className={({ isActive }) => isActive ? "active" : ""}>
+            Rename template
           </NavLink>
         </li>
         <li>

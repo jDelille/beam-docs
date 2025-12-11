@@ -4,7 +4,6 @@ export const COMMAND_DOCS = {
       title: "Create a Project",
       intro:
         "Creates a new project from an installed template. This command copies the template, replaces placeholders, and sets up a ready-to-use project directory.",
-
       sections: [
         {
           heading: "What does this command do?",
@@ -19,8 +18,26 @@ export const COMMAND_DOCS = {
           heading: "Example",
           body: "Create a project using the default template:",
           subSection: {
-            title: "Basic Example",
-            description: "create project",
+            title: "Terminal output",
+            description: `beam> create project
+✔ What is your project named? » my-project
+✔ Which template do you want to use? » React-Typescript.tmpl
+✔ Do you want to customize placeholder values? » Yes
+
+PAGE_COMPONENT [Page]: Page
+PAGE_CLASSNAME [page]: page
+NAVBAR_COMPONENT [Navbar]: Navbar
+BUTTON_COMPONENT [Button]: PrimaryButton
+
+Creating file: projects/my-project/app/Page.tsx
+Creating file: projects/my-project/app/components/navbar/Navbar.tsx
+Creating file: projects/my-project/app/components/reusable/button/Button.tsx 
+Creating file: projects/my-project/styles/globals.scss
+Creating file: projects/my-project/.gitignore
+Creating file: projects/my-project/README.md
+
+🚀 Project my-project created using the React-Typescript.tmpl template
+`
           },
         },
       ],
@@ -38,14 +55,19 @@ export const COMMAND_DOCS = {
         {
           heading: "Usage",
           body: "Run the command specifying source and destination:",
-          list: ["copy project <source> <destination>"],
+          list: ["copy project"],
         },
         {
           heading: "Example",
           body: "Copy 'my-app' to 'my-app-copy':",
           subSection: {
-            title: "Example",
-            description: "copy project my-app my-app-copy",
+            title: "Terminal output",
+            description: `beam> copy project
+✔ Which project do you want to copy? » renamed-project
+Enter a new name for the copied project: copied-project
+Project copied successfully to 'projects/copied-project'
+            
+            `
           },
         },
       ],
@@ -70,8 +92,12 @@ export const COMMAND_DOCS = {
           heading: "Example",
           body: "Renaming 'old-project' to 'new-project':",
           subSection: {
-            title: "Example",
-            description: "rename project old-project new-project",
+            title: "Terminal output",
+            description: `beam> rename project
+✔ Which project do you want to rename? » my-project
+Enter a new name for the project 'my-project': renamed-project
+Project 'my-project' successfully renamed to 'renamed-project'.
+            `,
           },
         },
       ],
@@ -89,14 +115,19 @@ export const COMMAND_DOCS = {
         {
           heading: "Usage",
           body: "Specify the project to delete:",
-          list: ["delete project <name>"],
+          list: ["delete project"],
         },
         {
           heading: "Example",
-          body: "Delete project 'my-app':",
+          body: "Deleting a project:",
           subSection: {
-            title: "Example",
-            description: "delete project my-app",
+            title: "Terminal output",
+            description: `beam> delete project
+✔ Which project do you want to delete? » renamed-project
+✔ Are you sure you want to delete this project? » Yes
+Project 'renamed-project' moved to trash successfully.
+✔ Which project do you want to delete? » Quit  
+            `,
           },
         },
       ],
@@ -120,8 +151,12 @@ export const COMMAND_DOCS = {
           heading: "Example",
           body: "Viewing all projects:",
           subSection: {
-            title: "Example",
-            description: "view projects",
+            title: "Terminal output",
+            description: `beam> view projects
+Projects:
+demo-project
+my-project
+            `,
           },
         },
       ],
@@ -136,19 +171,22 @@ export const COMMAND_DOCS = {
       sections: [
         {
           heading: "What does this command do?",
-          body: "Creates a template that defines structure, files, and placeholders used for generating projects.",
+          body: "Running this command creates a new template file with some boilerplate code in it already to show you how to structure it.",
         },
         {
           heading: "Usage",
           body: "Run to create a new template:",
-          list: ["create template <name>"],
+          list: ["create template"],
         },
         {
           heading: "Example",
-          body: "Create a template called 'base-app':",
+          body: "Create a template called 'my-template':",
           subSection: {
-            title: "Example",
-            description: "create template base-app",
+            title: "Terminal output",
+            description: `beam> create template
+What is your template named? » my-template
+Template 'my-template' created successfully in '.templates'!
+            `,
           },
         },
       ],
@@ -161,19 +199,21 @@ export const COMMAND_DOCS = {
       sections: [
         {
           heading: "What does this command do?",
-          body: "Adds a template to the BEAM templates directory, making it available for project creation.",
+          body: "Adds a template to the BEAM templates directory, making it available for project creation. To successfully add a template, create a new .tmpl file on your desktop or anywhere on your computer, and right click it and select 'copy as path'. Paste this path into the command and install your new template.",
         },
         {
           heading: "Usage",
-          body: "Install a template from a folder or URL:",
-          list: ["install template <path-or-name>"],
+          body: "Install a template from a file on your computer:",
+          list: ["install template <path>"],
         },
         {
           heading: "Example",
-          body: "Install a local template called 'base-app':",
+          body: "Install a local template called 'demo-template':",
           subSection: {
-            title: "Example",
-            description: "install template base-app",
+            title: "Terminal output",
+            description: `beam> install template "C:\Users\\user\\Desktop\\demo-template.tmpl"
+Installed template: .templates/demo-template.tmpl
+            `,
           },
         },
       ],
@@ -196,7 +236,7 @@ export const COMMAND_DOCS = {
           heading: "Example",
           body: "Download a template from a remote source:",
           subSection: {
-            title: "Example",
+            title: "Terminal output",
             description: "download template https://example.com/base-app.zip",
           },
         },
@@ -215,14 +255,18 @@ export const COMMAND_DOCS = {
         {
           heading: "Usage",
           body: "Run the command specifying source and destination template names:",
-          list: ["copy template <source> <destination>"],
+          list: ["copy template"],
         },
         {
           heading: "Example",
-          body: "Copy template 'base-app' to 'base-app-copy':",
+          body: "Copy a template and rename to 'React-SQL':",
           subSection: {
-            title: "Example",
-            description: "copy template base-app base-app-copy",
+            title: "Terminal output",
+            description: `beam> copy template
+✔ Which template do you want to copy? » demo-template.tmpl
+Enter a new filename for the copied template: React-SQL          
+Template copied successfully to .templates/React-SQL.tmpl
+            `,
           },
         },
       ],
@@ -239,15 +283,19 @@ export const COMMAND_DOCS = {
         },
         {
           heading: "Usage",
-          body: "Run the command with old and new template names:",
-          list: ["rename template <old-name> <new-name>"],
+          body: "Run the command to rename a template:",
+          list: ["rename template"],
         },
         {
           heading: "Example",
-          body: "Rename template 'base-app' to 'core-app':",
+          body: "Rename template 'react' to 'React-Firebase':",
           subSection: {
-            title: "Example",
-            description: "rename template base-app core-app",
+            title: "Terminal output",
+            description: `beam> rename template
+✔ Which template do you want to rename? » react.tmpl
+Enter a new name for the template 'react.tmpl': React-Firebase
+Template 'react.tmpl' successfully renamed to 'React-Firebase'.
+            `,
           },
         },
       ],
@@ -264,14 +312,22 @@ export const COMMAND_DOCS = {
         {
           heading: "Usage",
           body: "Run to delete a template:",
-          list: ["delete template <name>"],
+          list: ["delete template"],
         },
         {
           heading: "Example",
-          body: "Delete template 'base-app':",
+          body: "Delete multiple templates:",
           subSection: {
-            title: "Example",
-            description: "delete template base-app",
+            title: "Terminal output",
+            description: `beam> delete template
+✔ Which template do you want to delete? » demo-template.tmpl
+✔ Are you sure you want to delete this template? » Yes
+Template 'demo-template.tmpl' deleted successfully.
+✔ Which template do you want to delete? » my-template.tmpl
+✔ Are you sure you want to delete this template? » Yes
+Template 'my-template.tmpl' deleted successfully.
+✔ Which template do you want to delete? » Quit
+            `,
           },
         },
       ],
@@ -294,7 +350,7 @@ export const COMMAND_DOCS = {
           heading: "Example",
           body: "Viewing all templates:",
           subSection: {
-            title: "Example",
+            title: "Terminal output",
             description: "view templates",
           },
         },

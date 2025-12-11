@@ -1,43 +1,46 @@
-@use '../../styles/variables' as var;
-@use '../../styles/breakpoints' as bp;
+@use "../../styles/variables" as var;
+@use "../../styles/breakpoints" as bp;
 
 .navbar {
-    height: 64px;
-    width: 100%;
-    background-color: var.$primaryBGColor;
-    border-bottom: 1px solid rgb(0 0 0 / 8%);
+  height: 64px;
+  width: 100%;
+  background-color: var.$primaryBGColor;
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  @include bp.respond(md) {
+    padding: 0 2rem;
+  }
+  .navbar-content {
+    width: var.$pageWidth;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    @include bp.respond(md) {
-        padding: 0 2rem;
+    gap: 3rem;
+    .logo {
+      h1 {
+        font-size: 36px;
+        font-weight: 400;
+        font-family: "Faster One", system-ui;
+        color: rgb(63, 63, 63);
+
+      }
     }
-    .navbar-content {
-        width: var.$pageWidth;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        gap: 3rem;
-        .logo {
-            h1 {
-                font-size: 26px;
-                font-weight: 500;
-            }
-        }
-        .links {
-            display: flex;
-            list-style: none;
-            flex: 1;
-            gap: 1.5rem;
-            li {
-                font-size: 14px;
-                color: #666;
-            }
-        }
-        .controls {
-            margin-left: auto;
-        }
+    .links {
+      display: flex;
+      list-style: none;
+      flex: 1;
+      gap: 1.5rem;
+      li {
+        font-size: 14px;
+        color: #666;
+      }
     }
+    .controls {
+      margin-left: auto;
+    }
+  }
 }

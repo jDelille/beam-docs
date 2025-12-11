@@ -13,6 +13,10 @@ export default function Layout() {
           <LeftSidebar />
         </aside>
         <main>
+          {/* <div className="notice">
+            <div className="label">Important</div>
+            <p>This CLI is still in its beta phase </p>
+          </div> */}
           <Outlet />
         </main>
         <aside>

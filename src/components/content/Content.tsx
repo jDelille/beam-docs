@@ -23,7 +23,7 @@ const Content: React.FC<ContentProps> = ({ title, intro, sections }) => {
   return (
     <article className="content">
       <h1>{title}</h1>
-      <p>{intro}</p>
+      <p className="intro">{intro}</p>
 
       {sections.map((s, i) => (
         <div key={i}>

@@ -14,7 +14,11 @@ $breakpoints: (
     @error "Breakpoint '#{$key}' not found in \$breakpoints map.";
   }
 
-  @media (#{$direction}-width: #{$size}) {
+  @if $direction != min and $direction != max {
+    @error "Direction must be 'min' or 'max'.";
+  }
+
+  @media (#{$direction}-width: $size) {
     @content;
   }
 }
