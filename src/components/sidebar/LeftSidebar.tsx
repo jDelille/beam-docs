@@ -1,5 +1,4 @@
 import React from "react";
-import { BiPurchaseTagAlt } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.scss";
 
