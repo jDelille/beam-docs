@@ -25,6 +25,12 @@ export const GETTING_STARTED_DOCS = {
         ],
       },
     ],
+    navigation: {
+      previousLink: "/docs/getting-started/commands",
+      previousName: "Commands",
+      nextLink: "/docs/getting-started/templateStructure",
+      nextName: "Template Structure",
+    },
   },
 
   templateStructure: {
@@ -55,11 +61,18 @@ export const GETTING_STARTED_DOCS = {
         ],
       },
     ],
+    navigation: {
+      previousLink: "/docs/getting-started/whatIsBeam",
+      previousName: "What is Beam?",
+      nextLink: "/docs/getting-started/installTemplates",
+      nextName: "Install Templates",
+    },
   },
 
   installTemplates: {
     title: "Installing Templates",
-    intro: "Templates must be installed in BEAM to create projects from them. BEAM provides multiple ways to install templates.",
+    intro:
+      "Templates must be installed in BEAM to create projects from them. BEAM provides multiple ways to install templates.",
     sections: [
       {
         heading: "Local Installation",
@@ -78,11 +91,18 @@ export const GETTING_STARTED_DOCS = {
         body: "After installation, use `view templates` to list all available templates and ensure your new template is ready to use.",
       },
     ],
+    navigation: {
+      previousLink: "/docs/getting-started/templateStructure",
+      previousName: "Template Structure",
+      nextLink: "/docs/getting-started/commands",
+      nextName: "Commands",
+    },
   },
 
   commands: {
     title: "Commands",
-    intro: "BEAM provides a set of commands for managing projects, templates, files, and utilities. Below is an overview of key commands.",
+    intro:
+      "BEAM provides a set of commands for managing projects, templates, files, and utilities. Below is an overview of key commands.",
     sections: [
       {
         heading: "Project Commands",
@@ -129,5 +149,11 @@ export const GETTING_STARTED_DOCS = {
         ],
       },
     ],
+    navigation: {
+      previousLink: "/docs/getting-started/installTemplates",
+      previousName: "Install Templates",
+      nextLink: "/docs/getting-started/whatIsBeam",
+      nextName: "What is Beam?",
+    },
   },
 } as const;

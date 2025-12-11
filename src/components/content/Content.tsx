@@ -1,5 +1,6 @@
 import React from "react";
 import "./Content.scss";
+import { Link } from "react-router-dom";
 
 interface SubSection {
   title: string;
@@ -13,13 +14,21 @@ interface Section {
   subSection?: SubSection;
 }
 
+interface Navigation {
+  previousName: string;
+  previousLink: string;
+  nextName: string;
+  nextLink: string;
+}
+
 interface ContentProps {
   title: string;
   intro: string;
   sections: readonly Section[]; 
+  navigation: Navigation
 }
 
-const Content: React.FC<ContentProps> = ({ title, intro, sections }) => {
+const Content: React.FC<ContentProps> = ({ title, intro, sections, navigation }) => {
   return (
     <article className="content">
       <h1>{title}</h1>
@@ -45,7 +54,24 @@ const Content: React.FC<ContentProps> = ({ title, intro, sections }) => {
             </div>
           )}
         </div>
+        
       ))}
+
+       {navigation && (
+        <div className="navigation-buttons">
+          {navigation.previousLink && (
+            <Link to={navigation.previousLink} className="nav-button prev">
+              ← {navigation.previousName}
+            </Link>
+          )}
+          {navigation.nextLink && (
+            <Link to={navigation.nextLink} className="nav-button next">
+              {navigation.nextName} →
+            </Link>
+          )}
+        </div>
+      )}
+      
     </article>
   );
 };

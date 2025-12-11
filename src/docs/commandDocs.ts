@@ -37,40 +37,16 @@ Creating file: projects/my-project/.gitignore
 Creating file: projects/my-project/README.md
 
 🚀 Project my-project created using the React-Typescript.tmpl template
-`
+`,
           },
         },
       ],
-    },
-
-    copy: {
-      title: "Copy a Project",
-      intro:
-        "Duplicates an existing project into a new folder while preserving all files and configurations.",
-      sections: [
-        {
-          heading: "What does this command do?",
-          body: "Clones an existing project to a new directory, keeping all files, templates, and configurations intact.",
-        },
-        {
-          heading: "Usage",
-          body: "Run the command specifying source and destination:",
-          list: ["copy project"],
-        },
-        {
-          heading: "Example",
-          body: "Copy 'my-app' to 'my-app-copy':",
-          subSection: {
-            title: "Terminal output",
-            description: `beam> copy project
-✔ Which project do you want to copy? » renamed-project
-Enter a new name for the copied project: copied-project
-Project copied successfully to 'projects/copied-project'
-            
-            `
-          },
-        },
-      ],
+      navigation: {
+        previousLink: "/docs/commands/project/view",
+        previousName: "View Projects",
+        nextLink: "/docs/commands/project/rename",
+        nextName: "Rename Project",
+      },
     },
 
     rename: {
@@ -101,6 +77,48 @@ Project 'my-project' successfully renamed to 'renamed-project'.
           },
         },
       ],
+      navigation: {
+        previousLink: "/docs/commands/project/create",
+        previousName: "Create Project",
+        nextLink: "/docs/commands/project/copy",
+        nextName: "Copy Project",
+      },
+    },
+
+    copy: {
+      title: "Copy a Project",
+      intro:
+        "Duplicates an existing project into a new folder while preserving all files and configurations.",
+      sections: [
+        {
+          heading: "What does this command do?",
+          body: "Clones an existing project to a new directory, keeping all files, templates, and configurations intact.",
+        },
+        {
+          heading: "Usage",
+          body: "Run the command specifying source and destination:",
+          list: ["copy project"],
+        },
+        {
+          heading: "Example",
+          body: "Copy 'my-app' to 'my-app-copy':",
+          subSection: {
+            title: "Terminal output",
+            description: `beam> copy project
+✔ Which project do you want to copy? » renamed-project
+Enter a new name for the copied project: copied-project
+Project copied successfully to 'projects/copied-project'
+            
+            `,
+          },
+        },
+      ],
+      navigation: {
+        previousLink: "/docs/commands/project/rename",
+        previousName: "Rename Project",
+        nextLink: "/docs/commands/project/delete",
+        nextName: "Delete Project",
+      },
     },
 
     delete: {
@@ -131,6 +149,12 @@ Project 'renamed-project' moved to trash successfully.
           },
         },
       ],
+      navigation: {
+        previousLink: "/docs/commands/project/copy",
+        previousName: "Copy Project",
+        nextLink: "/docs/commands/project/view",
+        nextName: "View Project",
+      },
     },
 
     view: {
@@ -160,6 +184,12 @@ my-project
           },
         },
       ],
+      navigation: {
+        previousLink: "/docs/commands/project/delete",
+        previousName: "Delete Project",
+        nextLink: "/docs/commands/project/create",
+        nextName: "Create Project",
+      },
     },
   },
 
@@ -190,6 +220,12 @@ Template 'my-template' created successfully in '.templates'!
           },
         },
       ],
+      navigation: {
+        previousLink: "/docs/commands/template/download",
+        previousName: "Download Template",
+        nextLink: "/docs/commands/template/install",
+        nextName: "Install Template",
+      },
     },
 
     install: {
@@ -217,6 +253,12 @@ Installed template: .templates/demo-template.tmpl
           },
         },
       ],
+      navigation: {
+        previousLink: "/docs/commands/template/create",
+        previousName: "Create Template",
+        nextLink: "/docs/commands/template/copy",
+        nextName: "Copy Template",
+      },
     },
 
     download: {
@@ -241,6 +283,12 @@ Installed template: .templates/demo-template.tmpl
           },
         },
       ],
+       navigation: {
+        previousLink: "/docs/commands/template/delete",
+        previousName: "Delete Template",
+        nextLink: "/docs/commands/template/create",
+        nextName: "Create Template",
+      }
     },
 
     copy: {
@@ -270,6 +318,12 @@ Template copied successfully to .templates/React-SQL.tmpl
           },
         },
       ],
+        navigation: {
+        previousLink: "/docs/commands/template/install",
+        previousName: "Install Template",
+        nextLink: "/docs/commands/template/rename",
+        nextName: "Rename Template",
+      }
     },
 
     rename: {
@@ -299,6 +353,12 @@ Template 'react.tmpl' successfully renamed to 'React-Firebase'.
           },
         },
       ],
+        navigation: {
+        previousLink: "/docs/commands/template/copy",
+        previousName: "Copy Template",
+        nextLink: "/docs/commands/template/delete",
+        nextName: "Delete Template",
+      }
     },
 
     delete: {
@@ -331,6 +391,12 @@ Template 'my-template.tmpl' deleted successfully.
           },
         },
       ],
+          navigation: {
+        previousLink: "/docs/commands/template/rename",
+        previousName: "Rename Template",
+        nextLink: "/docs/commands/template/download",
+        nextName: "Download Template",
+      }
     },
 
     list: {
@@ -369,6 +435,7 @@ Template 'my-template.tmpl' deleted successfully.
           list: ["clear"],
         },
       ],
+      
     },
 
     goto: {
@@ -394,6 +461,12 @@ Template 'my-template.tmpl' deleted successfully.
           list: ["view trash"],
         },
       ],
+       navigation: {
+        previousLink: "/docs/commands/trash/recover",
+        previousName: "Recover file / folder",
+        nextLink: "/docs/commands/trash/empty",
+        nextName: "Empty Trash",
+      },
     },
 
     recover: {
@@ -406,6 +479,12 @@ Template 'my-template.tmpl' deleted successfully.
           list: ["recover <file-name>"],
         },
       ],
+       navigation: {
+        previousLink: "/docs/commands/trash/empty",
+        previousName: "Empty Trash",
+        nextLink: "/docs/commands/trash/view",
+        nextName: "View Trash",
+      },
     },
 
     empty: {
@@ -418,6 +497,12 @@ Template 'my-template.tmpl' deleted successfully.
           list: ["empty trash"],
         },
       ],
+       navigation: {
+        previousLink: "/docs/commands/trash/view",
+        previousName: "View Trash",
+        nextLink: "/docs/commands/trash/recover",
+        nextName: "Recover file / folder",
+      },
     },
 
     help: {

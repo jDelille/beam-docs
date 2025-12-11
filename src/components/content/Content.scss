@@ -62,4 +62,14 @@
       font-weight: 500;
     }
   }
+
+  .navigation-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    a {
+      font-size: 14px;
+    }
+  }
 }

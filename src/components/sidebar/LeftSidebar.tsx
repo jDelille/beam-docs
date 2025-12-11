@@ -41,77 +41,77 @@ const LeftSidebar: React.FC<SidebarProps> = () => {
         <p className="section-title">Project Commands</p>
         <li>
           <NavLink to="/docs/commands/project/create" className={({ isActive }) => isActive ? "active" : ""}>
-            Create project
+            Create
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/project/rename" className={({ isActive }) => isActive ? "active" : ""}>
-            Rename project
+            Rename
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/project/copy" className={({ isActive }) => isActive ? "active" : ""}>
-            Copy project
+            Copy
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/project/delete" className={({ isActive }) => isActive ? "active" : ""}>
-            Delete project
+            Delete
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/project/view" className={({ isActive }) => isActive ? "active" : ""}>
-            View projects
+            View
           </NavLink>
         </li>
 
         <p className="section-title">Template Commands</p>
         <li>
           <NavLink to="/docs/commands/template/create" className={({ isActive }) => isActive ? "active" : ""}>
-            Create template
+            Create 
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/template/install" className={({ isActive }) => isActive ? "active" : ""}>
-            Install template
+            Install 
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/template/copy" className={({ isActive }) => isActive ? "active" : ""}>
-            Copy template
+            Copy 
           </NavLink>
         </li>
          <li>
           <NavLink to="/docs/commands/template/rename" className={({ isActive }) => isActive ? "active" : ""}>
-            Rename template
+            Rename 
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/template/delete" className={({ isActive }) => isActive ? "active" : ""}>
-            Delete template
+            Delete 
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/template/download" className={({ isActive }) => isActive ? "active" : ""}>
-            Download template
+            Download 
           </NavLink>
         </li>
-        <li className="greyed-out">Upload template</li>
+        <li className="greyed-out">Upload </li>
 
         <p className="section-title">Trash Commands</p>
         <li>
           <NavLink to="/docs/commands/trash/view" className={({ isActive }) => isActive ? "active" : ""}>
-            View trash
+            View 
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/trash/empty" className={({ isActive }) => isActive ? "active" : ""}>
-            Empty trash
+            Empty
           </NavLink>
         </li>
         <li>
           <NavLink to="/docs/commands/trash/recover" className={({ isActive }) => isActive ? "active" : ""}>
-            Recover file
+            Recover
           </NavLink>
         </li>
       </ul>
