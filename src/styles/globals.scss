@@ -22,8 +22,7 @@ main {
         display: flex;
         padding-bottom: 3rem;
         @include bp.respond(md) {
-            padding: 0 2rem;
-            
+            padding: 0 2rem;            
         }
 
         .templates {
@@ -31,6 +30,7 @@ main {
             flex-wrap: wrap;
             gap: 1rem;
             margin: 2rem 0;
+            width: 900px;
             .template {
                 width: 233px;
                 height: 200px;
