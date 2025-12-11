@@ -79,7 +79,7 @@
       padding-left: 5px;
     }
     .active {
-      color: #050505;
+      color: rgb(38, 94, 250);
     }
     .greyed-out {
       color: lightgray;
@@ -96,10 +96,7 @@
 }
 
 .sidebar .links li a.active {
-  color: black; /* active link color */
-  font-weight: 500 /* optional: make it stand out more */
+  color: rgb(38, 94, 250);
+  font-weight: 400 /* optional: make it stand out more */
 }
 
-.sidebar .links li a:visited {
-  color: #333;
-}
