@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = () => {
     <nav className="navbar">
       <div className="navbar-content">
         <div className="logo">
-          <h1>BEAM</h1>
+          <NavLink to={'/'} className={"logo-text"}>BEAM</NavLink>
         </div>
         <ul className="links">
           <li>

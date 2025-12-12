@@ -21,12 +21,13 @@
     align-items: center;
     gap: 3rem;
     .logo {
-      h1 {
-        font-size: 36px;
+      .logo-text {
+        font-family: "Honk", system-ui;
+        font-optical-sizing: auto;
         font-weight: 400;
-        font-family: "Faster One", system-ui;
-        color: rgb(63, 63, 63);
-
+        font-style: normal;
+        font-size: 36px;
+        font-variation-settings: "MORF" 15, "SHLN" 50;
       }
     }
     .links {
@@ -34,13 +35,15 @@
       list-style: none;
       flex: 1;
       gap: 1.5rem;
+      
       li {
         font-size: 14px;
         color: #666;
+        font-weight: 500;
       }
       .active {
-        color: rgb(38, 94, 250);
-        font-weight: 400;
+        color: var.$accent;
+        font-weight: 500;
       }
     }
     .controls {

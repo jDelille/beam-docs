@@ -96,7 +96,7 @@
 }
 
 .sidebar .links li a.active {
-  color: rgb(38, 94, 250);
+  color: var.$accent;
   font-weight: 400 /* optional: make it stand out more */
 }
 
