@@ -1,7 +1,7 @@
 import React from "react";
 import Content from "../components/content/Content";
 import { COMMAND_DOCS } from "../docs/commandDocs";
-import { useParams, type Navigation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 type Section = {
   heading: string;
