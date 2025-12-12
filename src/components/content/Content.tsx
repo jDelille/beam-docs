@@ -25,7 +25,7 @@ interface ContentProps {
   title: string;
   intro: string;
   sections: readonly Section[]; 
-  navigation: Navigation
+  navigation: Navigation;
 }
 
 const Content: React.FC<ContentProps> = ({ title, intro, sections, navigation }) => {

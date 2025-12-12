@@ -47,4 +47,10 @@ export const ABOUT_PAGE = {
       body: "For detailed guides, visit the official documentation or reach out to support channels if you encounter issues.",
     },
   ],
+  navigation: {
+        previousLink: "/templates",
+        previousName: "Templates",
+        nextLink: "/docs/getting-started/whatIsBeam",
+        nextName: "Rename Project",
+      },
 } as const;

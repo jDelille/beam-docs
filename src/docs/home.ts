@@ -34,4 +34,10 @@ You can browse the Commands section to see everything BEAM can do.`,
 then explore Commands and Guides to unlock BEAM’s full potential.`,
     },
   ],
+   navigation: {
+        previousLink: "/templates",
+        previousName: "Templates",
+        nextLink: "/docs/getting-started/whatIsBeam",
+        nextName: "Rename Project",
+      },
 } as const;
