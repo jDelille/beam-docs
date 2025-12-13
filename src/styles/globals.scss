@@ -1,9 +1,26 @@
 @use "./variables" as var;
 @use "./breakpoints" as bp;
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Honk:MORF@15&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+html.light {
+  --bg: #fff;
+  --text: #030712;
+  --border: lightgray;
+  --lightgray: #4a5565;
+  --dividerColor: #364153;
+
+}
+
+html.dark {
+  --bg: #030712;
+  --text: #fff;
+  --border: #4a5565;
+  --lightgray: #d1d5dc;
+  --dividerColor: #364153;
+}
 
 * {
   margin: 0;
@@ -17,7 +34,7 @@ main {
 }
 
 .page {
-  background-color: var.$primaryBGColor;
+   background-color: var(--bg);
   .page-content {
     margin: 0 auto;
     width: 1400px;
@@ -44,25 +61,23 @@ main {
       padding: 0rem;
     }
 
-
-
     .notice {
-        margin-top: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 14px;
-        justify-content: center;
-        .label {
-            color: #721c24;
-            background-color: #f7e0e2;
-            border-color: #f5c6cb;
-            width: fit-content;
-            font-size: 12px;
-            padding: 5px 10px;
-            border-radius: 22px;
-            font-weight: 500;
-        }
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 14px;
+      justify-content: center;
+      .label {
+        color: #721c24;
+        background-color: #f7e0e2;
+        border-color: #f5c6cb;
+        width: fit-content;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 22px;
+        font-weight: 500;
+      }
     }
   }
 }

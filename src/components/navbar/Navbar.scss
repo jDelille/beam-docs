@@ -4,13 +4,15 @@
 .navbar {
   height: 64px;
   width: 100%;
-  background-color: var.$primaryBGColor;
-  border-bottom: 1px solid rgb(0 0 0 / 8%);
+  background-color: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--dividerColor);
   display: flex;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 9999;
+
   @include bp.respond(md) {
     padding: 0 2rem;
   }
@@ -22,12 +24,11 @@
     gap: 3rem;
     .logo {
       .logo-text {
-        font-family: "Honk", system-ui;
-        font-optical-sizing: auto;
+        font-family: "Dela Gothic One", sans-serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 36px;
-        font-variation-settings: "MORF" 15, "SHLN" 50;
+        font-size: 27px;
+        color: var(--text);
       }
     }
     .links {
@@ -35,10 +36,10 @@
       list-style: none;
       flex: 1;
       gap: 1.5rem;
-      
+
       li {
         font-size: 14px;
-        color: #666;
+        color: var(--lightgray);
         font-weight: 500;
       }
       .active {

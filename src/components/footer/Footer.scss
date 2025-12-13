@@ -2,15 +2,15 @@
 
 .footer {
   height: 400px;
-  background-color: fff;
   width: 100%;
-  border-top: 1px solid var.$borderColor;
+  border-top: 1px solid var(--dividerColor);
   padding: 2rem 0;
+  background-color: var(--bg);
+  color: var(--text);
   .footer-content {
     width: 1400px;
     margin: 0 auto;
     display: flex;
-
     .name {
       height: calc(400px - 4rem);
       width: 15%;
@@ -19,12 +19,11 @@
       justify-content: space-between;
        min-width: 284px;
       h1 {
-        font-family: "Honk", system-ui;
-        font-optical-sizing: auto;
+        font-family: "Dela Gothic One", sans-serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 36px;
-        font-variation-settings: "MORF" 15, "SHLN" 50;
+        font-size: 28px;
+        color: var(--text);
       }
       P {
         color: gray;
@@ -35,7 +34,6 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
-      // border: 1px solid lime;
       padding: 0 3rem;
       .section {
         display: flex;
@@ -50,7 +48,7 @@
         }
         li {
           font-size: 14px;
-          color: #6d6c6c;
+          color: var(--lightgray);
           list-style: none;
         }
       }

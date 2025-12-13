@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import ThemeToggle from "../theme-toggle/ThemeToggle";
 
 type FooterProps = {};
 const Footer: React.FC<FooterProps> = () => {
@@ -9,6 +10,7 @@ const Footer: React.FC<FooterProps> = () => {
         <div className="name">
           <h1>BEAM</h1>
           <p>© 2025 BEAM</p>
+          <ThemeToggle />
         </div>
         <div className="sections">
           <ul className="section">

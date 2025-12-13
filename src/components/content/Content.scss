@@ -2,15 +2,15 @@
 @use "../../styles/breakpoints" as bp;
 
 .content {
-  background-color: var.$primaryBGColor;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: var.$primaryTextColor;
   padding-inline: 3rem;
   margin-top: 2rem;
   padding-bottom: 2.5rem;
+  background-color: var(--bg);
+  color: var(--text);
   h1 {
     font-weight: 600;
     font-size: 35px;
@@ -23,9 +23,7 @@
     line-height: 24px;
   }
   .docs-heading {
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-color: var.$borderColor;
+    border-top: 1px solid var(--dividerColor);
     padding-top: calc(0.25rem * 10);
     margin-top: calc(0.25rem * 10);
     font-weight: 600;
@@ -70,6 +68,11 @@
     margin-top: 3rem;
     a {
       font-size: 14px;
+      color: var(--lightgray);
+      cursor: pointer;
+      &:hover {
+        color: var(--text);
+      }
     }
   }
 }
