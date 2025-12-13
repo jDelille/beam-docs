@@ -1,0 +1,32 @@
+    .templates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 900px;
+      .template {
+        width: 233px;
+        height: 200px;
+        border: 1px solid lightgray;
+        padding: 10px 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        cursor: pointer;
+        .name {
+          font-size: 22px;
+        }
+        .author {
+          font-size: 14px;
+          color: gray;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        .stats {
+          margin-top: auto;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }

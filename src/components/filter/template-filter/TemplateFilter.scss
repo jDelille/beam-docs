@@ -1,0 +1,26 @@
+.template-filter {
+    height: 40px;
+    width: 100%;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .option {
+       border: 1px solid lightgray;
+       padding: 5px 10px;
+       border-radius: 4px;
+       font-size: 13px;
+       cursor: pointer;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 6px;
+       background-color: rgb(252, 252, 252);
+       &:nth-of-type(1) {
+        svg {
+            margin-left: 2px;
+        }
+       }
+    }
+}
