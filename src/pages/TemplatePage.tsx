@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import type { Template } from '../types/template';
 import { fetchTemplateById } from '../utils/getTemplates';
 import { useParams } from 'react-router-dom';
+import TemplatePageContent from '../components/template-page-content/TemplatePageContent';
 
 type TemplatePageProps = {
  
@@ -33,21 +34,9 @@ const TemplatePage: React.FC<TemplatePageProps> = () => {
   if (!template) return <div>Template not found</div>;
 
   return (
-    <div className="page">
-       <div className="content">
-        <div className='header'>
-          <h1>{template.title}</h1>
-          <p>by {template.author}</p>
-          <p>{template.description}</p>
-        </div>
-        
-        <div className="meta">
-          ⭐ {template.rating} • ⬇ {template.downloads}
-        </div>
-
-        <pre>
-          <code>{template.content}</code>
-        </pre>
+    <div className='page'>
+      <div className='content'>
+        <TemplatePageContent template={template} />
       </div>
     </div>
   );
