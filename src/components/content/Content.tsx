@@ -1,6 +1,7 @@
 import React from "react";
 import "./Content.scss";
 import { Link } from "react-router-dom";
+import { LeftArrowIcon, RightArrowIcon } from "../../icons";
 
 interface SubSection {
   title: string;
@@ -61,12 +62,14 @@ const Content: React.FC<ContentProps> = ({ title, intro, sections, navigation })
         <div className="navigation-buttons">
           {navigation.previousLink && (
             <Link to={navigation.previousLink} className="nav-button prev">
-              ← {navigation.previousName}
+              <LeftArrowIcon size={14} color="gray"/>
+              {navigation.previousName}
             </Link>
           )}
           {navigation.nextLink && (
             <Link to={navigation.nextLink} className="nav-button next">
-              {navigation.nextName} →
+              {navigation.nextName}
+              <RightArrowIcon size={14} color="gray"/>
             </Link>
           )}
         </div>
