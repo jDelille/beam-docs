@@ -62,7 +62,7 @@ export const GETTING_STARTED_DOCS = {
       },
     ],
     navigation: {
-      previousLink: "/docs/getting-started/whatIsBeam",
+      previousLink: "/docs/getting-started/whatIsBEAM",
       previousName: "What is BEAM?",
       nextLink: "/docs/getting-started/installTemplates",
       nextName: "Install Templates",

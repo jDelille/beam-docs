@@ -37,7 +37,7 @@ then explore Commands and Guides to unlock BEAM’s full potential.`,
    navigation: {
         previousLink: "/templates",
         previousName: "Templates",
-        nextLink: "/docs/getting-started/whatIsBeam",
+        nextLink: "/docs/getting-started/whatIsBEAM",
         nextName: "Rename Project",
       },
 } as const;

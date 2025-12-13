@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         <ul className="links">
           <li>
             <Link
-              to="/docs/getting-started/whatIsBeam"
+              to="/docs/getting-started/whatIsBEAM"
               className={isDocs ? "active" : "inactive"}
             >
               Docs
