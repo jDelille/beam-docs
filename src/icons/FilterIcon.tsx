@@ -5,7 +5,7 @@ type FilterIconProps = {
   color: string;
 };
 
-const FilterIcon: React.FC<FilterIconProps> = ({ size, color }) => {
+const FilterIcon: React.FC<FilterIconProps> = ({ size }) => {
   return (
     <svg
       width={size}

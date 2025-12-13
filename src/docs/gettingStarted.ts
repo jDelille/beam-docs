@@ -1,5 +1,5 @@
 export const GETTING_STARTED_DOCS = {
-  whatIsBeam: {
+  whatIsBEAM: {
     title: "What is BEAM?",
     intro:
       "BEAM is a powerful command-line tool for generating new projects from reusable, customizable templates. It helps developers maintain consistency, save time, and eliminate repetitive setup work. Currently, only creating projects using templates is implemented. We are working on doing the same for files and components. Stay tuned for the upcomming BEAM updates and reach out if you want to collaborate.",
@@ -26,8 +26,8 @@ export const GETTING_STARTED_DOCS = {
       },
     ],
     navigation: {
-      previousLink: "/docs/getting-started/commands",
-      previousName: "Commands",
+      previousLink: "/docs/commands/trash/recover",
+      previousName: "Recover File | Folder",
       nextLink: "/docs/getting-started/templateStructure",
       nextName: "Template Structure",
     },
@@ -63,7 +63,7 @@ export const GETTING_STARTED_DOCS = {
     ],
     navigation: {
       previousLink: "/docs/getting-started/whatIsBeam",
-      previousName: "What is Beam?",
+      previousName: "What is BEAM?",
       nextLink: "/docs/getting-started/installTemplates",
       nextName: "Install Templates",
     },
@@ -152,8 +152,8 @@ export const GETTING_STARTED_DOCS = {
     navigation: {
       previousLink: "/docs/getting-started/installTemplates",
       previousName: "Install Templates",
-      nextLink: "/docs/getting-started/whatIsBeam",
-      nextName: "What is Beam?",
+      nextLink: "/docs/commands/project/create",
+      nextName: "Create Project",
     },
   },
 } as const;

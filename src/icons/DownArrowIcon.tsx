@@ -5,7 +5,7 @@ type IconNameProps = {
   color: string;
 };
 
-const IconName: React.FC<IconNameProps> = ({ size, color }) => {
+const IconName: React.FC<IconNameProps> = ({ size }) => {
   return (
     <svg
       width={size}

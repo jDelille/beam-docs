@@ -42,8 +42,8 @@ Creating file: projects/my-project/README.md
         },
       ],
       navigation: {
-        previousLink: "/docs/commands/project/view",
-        previousName: "View Projects",
+        previousLink: "/docs/getting-started/commands",
+        previousName: "Commands",
         nextLink: "/docs/commands/project/rename",
         nextName: "Rename Project",
       },
@@ -187,8 +187,8 @@ my-project
       navigation: {
         previousLink: "/docs/commands/project/delete",
         previousName: "Delete Project",
-        nextLink: "/docs/commands/project/create",
-        nextName: "Create Project",
+        nextLink: "/docs/commands/template/create",
+        nextName: "Create Template",
       },
     },
   },
@@ -221,8 +221,8 @@ Template 'my-template' created successfully in '.templates'!
         },
       ],
       navigation: {
-        previousLink: "/docs/commands/template/download",
-        previousName: "Download Template",
+        previousLink: "/docs/commands/project/view",
+        previousName: "View Projects",
         nextLink: "/docs/commands/template/install",
         nextName: "Install Template",
       },
@@ -286,8 +286,8 @@ Installed template: .templates/demo-template.tmpl
        navigation: {
         previousLink: "/docs/commands/template/delete",
         previousName: "Delete Template",
-        nextLink: "/docs/commands/template/create",
-        nextName: "Create Template",
+        nextLink: "/docs/commands/trash/view",
+        nextName: "View Trash",
       }
     },
 
@@ -482,8 +482,8 @@ Template 'my-template.tmpl' deleted successfully.
        navigation: {
         previousLink: "/docs/commands/trash/empty",
         previousName: "Empty Trash",
-        nextLink: "/docs/commands/trash/view",
-        nextName: "View Trash",
+        nextLink: "/docs/getting-started/whatIsBEAM",
+        nextName: "What Is BEAM?",
       },
     },
 

@@ -18,7 +18,7 @@ const LeftSidebar: React.FC<SidebarProps> = () => {
       <ul className="links">
         <p className="section-title">Getting Started</p>
         <li>
-          <NavLink to="/docs/getting-started/whatIsBeam" className={({ isActive }) => isActive ? "active" : ""}>
+          <NavLink to="/docs/getting-started/whatIsBEAM" className={({ isActive }) => isActive ? "active" : ""}>
             What is BEAM?
           </NavLink>
         </li>
