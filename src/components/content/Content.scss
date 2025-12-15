@@ -11,13 +11,17 @@
   padding-bottom: 2.5rem;
   background-color: var(--bg);
   color: var(--text);
+
   h1 {
     font-weight: 600;
     font-size: 35px;
   }
   p {
     font-size: 14px;
-    margin-top: 1rem;
+  }
+  h1,h2 {
+        margin-bottom: 1rem;
+
   }
   .intro {
     line-height: 24px;

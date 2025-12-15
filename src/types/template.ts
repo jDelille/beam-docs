@@ -2,7 +2,7 @@ export type Template = {
     id: string;
     title: string;
     description: string;
-    tags: string;
+    tags: string[];
     userId: string;
     downloads: number;
     rating: string;

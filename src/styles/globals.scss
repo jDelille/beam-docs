@@ -41,6 +41,7 @@ main {
     position: relative;
     display: flex;
     padding-bottom: 3rem;
+    // overflow-x: hidden;
     @include bp.respond(sm) {
       padding: 0 1rem;
     }

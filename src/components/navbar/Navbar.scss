@@ -41,6 +41,11 @@
         font-size: 14px;
         color: var(--lightgray);
         font-weight: 500;
+        a {
+          &:hover {
+          color: var(--text);
+        }
+        }
       }
       .active {
         color: var.$accent;

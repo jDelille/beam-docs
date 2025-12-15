@@ -2,6 +2,7 @@ import React from "react";
 import "./Content.scss";
 import { Link } from "react-router-dom";
 import { LeftArrowIcon, RightArrowIcon } from "../../icons";
+import { useTheme } from "../../context/ThemeContext";
 
 interface SubSection {
   title: string;
@@ -30,6 +31,10 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({ title, intro, sections, navigation }) => {
+    const { theme } = useTheme();
+
+    const isLightMode = theme === "light";
+  
   return (
     <article className="content">
       <h1>{title}</h1>
@@ -62,14 +67,14 @@ const Content: React.FC<ContentProps> = ({ title, intro, sections, navigation })
         <div className="navigation-buttons">
           {navigation.previousLink && (
             <Link to={navigation.previousLink} className="nav-button prev">
-              <LeftArrowIcon size={14} color="gray"/>
+              <LeftArrowIcon size={14} color={isLightMode ? "gray" : "white"}/>
               {navigation.previousName}
             </Link>
           )}
           {navigation.nextLink && (
             <Link to={navigation.nextLink} className="nav-button next">
               {navigation.nextName}
-              <RightArrowIcon size={14} color="gray"/>
+              <RightArrowIcon size={14} color={isLightMode ? "gray" : "white"}/>
             </Link>
           )}
         </div>

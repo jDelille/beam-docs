@@ -1,8 +1,8 @@
 import React from "react";
 import type { Template } from "../../types/template";
-import "./TemplatePageContent.scss";
 import { Link } from "react-router-dom";
 import { LeftArrowIcon } from "../../icons";
+import "./TemplatePageContent.scss";
 
 type TemplatePageContentProps = {
   template: Template;
@@ -29,15 +29,27 @@ const TemplatePageContent: React.FC<TemplatePageContentProps> = ({
           </div>
         </div>
         <p className="description">{template.description}</p>
-        <p>Created by {template.author}</p>
+        <p className="author">Created by {template.author}</p>
+
+        <div className="tags">
+          {template.tags.map((tag) => (
+            <div className="tag">{tag}</div>
+          ))}
+        </div>
       </div>
       <div className="template-file">
         <pre>
+          <div className="file-header">
+            <div className="text">
+              <p> Template </p>
+              <p className="copy-code-btn">Copy code </p>
+            </div>
+          </div>
           <code>{template.content}</code>
         </pre>
       </div>
 
-      <div className="getting-started">
+      {/* <div className="getting-started">
         <p className="title">Getting Started</p>
         <p>TODO: </p>
         <p>Have user add more data about the template when they upload one.</p>
@@ -47,7 +59,7 @@ const TemplatePageContent: React.FC<TemplatePageContentProps> = ({
         <p>Show accurate rating and downloads </p>
         <p>Maybe add user accounts so people can see other templates that user made or liked</p>
         <p>People can put their user id or something into the cli command when they upload a template</p>
-      </div>
+      </div> */}
     </div>
   );
 };
