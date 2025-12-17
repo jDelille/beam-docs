@@ -5,13 +5,24 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 100%;
   padding-inline: 3rem;
   margin-top: 2rem;
   padding-bottom: 2.5rem;
   background-color: var(--bg);
   color: var(--text);
-
+  width: 75%;
+  @include bp.respond(sm) {
+    padding-inline: 1rem;
+    width: 100%;
+  }
+    @include bp.respond(md) {
+    padding-inline: 1rem;
+    width: 100%;
+  }
+  @include bp.respond(lg) {
+    padding-inline: 1rem;
+    width: 100%;
+  }
   h1 {
     font-weight: 600;
     font-size: 35px;
@@ -19,9 +30,9 @@
   p {
     font-size: 14px;
   }
-  h1,h2 {
-        margin-bottom: 1rem;
-
+  h1,
+  h2 {
+    margin-bottom: 1rem;
   }
   .intro {
     line-height: 24px;

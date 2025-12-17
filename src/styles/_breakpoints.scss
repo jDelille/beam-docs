@@ -7,18 +7,26 @@ $breakpoints: (
   xxl: 1440px
 );
 
-@mixin respond($key, $direction: min) {
+@mixin respond($key) {
   $size: map-get($breakpoints, $key);
+  $next-key: null;
 
-  @if $size == null {
-    @error "Breakpoint '#{$key}' not found in \$breakpoints map.";
+  // Get next breakpoint
+  $keys: map-keys($breakpoints);
+  $index: index($keys, $key);
+  @if $index != length($keys) {
+    $next-key: nth($keys, $index + 1);
   }
 
-  @if $direction != min and $direction != max {
-    @error "Direction must be 'min' or 'max'.";
-  }
+  $max-width: if($next-key, map-get($breakpoints, $next-key) - 1px, null);
 
-  @media (#{$direction}-width: $size) {
-    @content;
+  @if $max-width {
+    @media (min-width: $size) and (max-width: $max-width) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $size) {
+      @content;
+    }
   }
 }

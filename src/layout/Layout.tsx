@@ -1,12 +1,11 @@
 import LeftSidebar from "../components/sidebar/LeftSidebar";
-import RightSidebar from "../components/sidebar/RightSidebar";
 import Footer from "../components/footer/Footer";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 
 export default function Layout() {
   return (
-    <div className="page">
+    <div className="layout-page">
       <Navbar />
       <div className="page-content">
         <aside>
@@ -19,9 +18,9 @@ export default function Layout() {
           </div> */}
           <Outlet />
         </main>
-        <aside>
+        {/* <aside>
           <RightSidebar />
-        </aside>
+        </aside> */}
       </div>
        <Footer />
     </div>

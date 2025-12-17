@@ -12,7 +12,7 @@ const Footer: React.FC<FooterProps> = () => {
           <p>© 2025 BEAM</p>
           <ThemeToggle />
         </div>
-        <div className="sections">
+        {/* <div className="sections">
           <ul className="section">
             <p className="section-title">Getting Started</p>
             <li>What is BEAM?</li>
@@ -45,27 +45,15 @@ const Footer: React.FC<FooterProps> = () => {
             <li>Empty</li>
             <li>Restore file / folder</li>
           </ul>
-          {/* <ul className="section">
+          <ul className="section">
             <p className="section-title">Guides</p>
             <li>Template structure</li>
             <li>Creating a project</li>
             <li>Uploading templates</li>
             <li>Downloading templates</li>
-          </ul> */}
-        </div>
-        <div className="newsletter">
-          {/* <div className="section">
-            <p className="section-title">Subscribe to our newsletter</p>
-            <p>
-              Stay updated on new releases and features, guides, and case
-              studies.
-            </p>
-            <div className="input">
-              <input type="text" placeholder="you@domain.com" />
-              <button>Subscribe</button>
-            </div>
-          </div> */}
-        </div>
+          </ul>
+        </div> */}
+
       </div>
     </footer>
   );

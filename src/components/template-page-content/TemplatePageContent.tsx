@@ -2,6 +2,7 @@ import React from "react";
 import type { Template } from "../../types/template";
 import { Link } from "react-router-dom";
 import { LeftArrowIcon } from "../../icons";
+import { useTheme } from "../../context/ThemeContext";
 import "./TemplatePageContent.scss";
 
 type TemplatePageContentProps = {
@@ -10,11 +11,15 @@ type TemplatePageContentProps = {
 const TemplatePageContent: React.FC<TemplatePageContentProps> = ({
   template,
 }) => {
+  const { theme } = useTheme();
+
+  const isLightMode = theme === "light";
+
   return (
     <div className="template-page-content">
       <div className="back">
         <Link to="/templates">
-          <LeftArrowIcon size={12} color="" />
+          <LeftArrowIcon size={12} color={isLightMode ? "gray" : "white"} />
           Back to Templates
         </Link>
       </div>
@@ -23,9 +28,9 @@ const TemplatePageContent: React.FC<TemplatePageContentProps> = ({
         <div className="title">
           {template.title}
           <div className="meta">
-            <p>{template.rating}/5 </p>
-            <p>•</p>
-            <p>{template.downloads} downloads</p>
+            {/* <p>{template.rating}/5 </p>
+            <p>•</p> */}
+            {/* <p>{template.downloads} downloads</p> */}
           </div>
         </div>
         <p className="description">{template.description}</p>

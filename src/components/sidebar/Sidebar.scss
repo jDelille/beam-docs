@@ -5,19 +5,35 @@
 .right-sidebar {
   min-width: 284px;
   height: calc(100vh - 64px);
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-right: 2rem;
   position: sticky;
   top: 64px;
   background-color: var(--bg);
   color: var(--text);
+  display: none;
+   @include bp.respond(sm) {
+    display: none;
+  }
   @include bp.respond(md) {
-    padding: 2rem;
+    padding: 0 2rem;
+    padding-top: 2rem;
+    display: block;
   }
-
   @include bp.respond(lg) {
-    padding: 2rem 0;
+    padding-top: 2rem;
+    display: block;
   }
+  @include bp.respond(xl) {
+    padding-top: 2rem;
+    margin-left: 2rem;
+    display: block;
+  }
+  @include bp.respond(xxl) {
+    display: block;
+  }
+  
+
   .version {
     border-radius: 4px;
     display: flex;
@@ -99,4 +115,28 @@
 .sidebar .links li a.active {
   color: var.$accent;
   font-weight: 400;
+}
+
+.right-sidebar {
+
+   @include bp.respond(sm) {
+    border: 1px solid red;
+    display: none;
+  }
+
+  @include bp.respond(md) {
+    display: none;
+    border: 1px solid red;
+  }
+
+  @include bp.respond(lg) {
+    display: none;
+  }
+
+  @include bp.respond(xl) {
+
+  }
+
+  @include bp.respond(xxl) {
+  }
 }

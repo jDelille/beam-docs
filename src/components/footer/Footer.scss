@@ -1,5 +1,5 @@
 @use "../../styles/variables" as var;
-
+@use '../../styles/breakpoints' as bp;
 .footer {
   height: 400px;
   width: 100%;
@@ -11,6 +11,29 @@
     width: 1400px;
     margin: 0 auto;
     display: flex;
+    @include bp.respond(sm) {
+      padding: 0 1rem;
+      max-width: 100%;
+    }
+
+    @include bp.respond(md) {
+      padding: 0 0rem;
+      max-width: 100%;
+    }
+
+    @include bp.respond(lg) {
+      padding: 0 2rem;
+      max-width: 100%;
+    }
+
+    @include bp.respond(xl) {
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+
+    @include bp.respond(xxl) {
+      padding: 0rem;
+    }
     .name {
       height: calc(400px - 4rem);
       width: 15%;

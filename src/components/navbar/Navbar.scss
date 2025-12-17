@@ -13,8 +13,24 @@
   top: 0;
   z-index: 9999;
 
+  @include bp.respond(sm) {
+    padding: 0 1rem;
+  }
+
   @include bp.respond(md) {
     padding: 0 2rem;
+  }
+
+  @include bp.respond(lg) {
+    padding: 0 2rem;
+  }
+
+  @include bp.respond(xl) {
+    padding: 0 2rem;
+  }
+
+  @include bp.respond(xxl) {
+    padding: 0rem 2rem;
   }
   .navbar-content {
     width: var.$pageWidth;
@@ -43,8 +59,8 @@
         font-weight: 500;
         a {
           &:hover {
-          color: var(--text);
-        }
+            color: var(--text);
+          }
         }
       }
       .active {
