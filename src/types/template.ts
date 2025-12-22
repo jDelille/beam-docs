@@ -11,3 +11,13 @@ export type Template = {
     updated_at: string;
     author: string;
 };
+
+export type CreateTemplateInput = {
+  title: string;
+  description: string;
+  tags: string[];         
+  content: string;
+  framework: string;
+  author: string;
+  userid: string | null;
+};

@@ -12,7 +12,7 @@
   background-color: var(--bg);
   color: var(--text);
   display: none;
-   @include bp.respond(sm) {
+  @include bp.respond(sm) {
     display: none;
   }
   @include bp.respond(md) {
